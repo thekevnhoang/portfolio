@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+<title>Project Z</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="functionBox">
+      <h1>Project Z</h1>
+      <p id="chooseFighter"> You have acquired the 7 Dragon Balls, use them ask Shenron for help and
+      summon a powerful Z-Fighter to help you take down the Evil Emperor Lord Frieza!</p>
+
+      <div class="buttonsBox" id="battleButtons">
+        <div class="pure-button" id="summonButton">SUMMON</div>
+        
+        <div id="attackButtons">
+        <div class="pure-button pure-button-error" id="attackButton">ATTACK</div><div class="pure-button-primary" id="specialAttackButton">SPECIAL ATTACK</div>
+        </div>
+
+        <div class="pure-button" id="nextRoundButton">NEXT ROUND</div>
+        <div class="pure-button" id="summonHeroButton">NEW HERO</div>
+    
+</div>
+
+      <div id="battleBox">
+        <h2 id="battleTitle"></h2>
+
+        <p id="fightEvasionOrAttack"></p>
+
+        <div id="heroFightStats">
+          <h3 id="heroFightName"></h3>
+          <ul id="heroHealthStat"></ul>
+          <ul id="heroKi"></ul>
+
+        </div>
+
+        <div id="enemyFightStats">
+          <h3 id="enemyFightName"></h3>
+          <ul id="enemyHealthStat"></ul>
+          <ul id="enemyKi"></ul>
+
+        </div>
+
+
+      </div>
+
+      <div id="resultsArea">
+        <div id="heroBox">
+          <p class="heroName">Z Fighter</p>
+          <ul id="heroStats"></ul>
+          <ul id="heroDamageStats"></ul>
+        </div>
+
+        <div id="enemyBox">
+          <p class="enemyName">Villain</p>
+          <ul id="enemyStats"></ul>
+          <ul id="enemyDamageStats"></ul>
+        </div>
+
+      </div>
+
+      <div id="battleEndBox">
+        <div id="victory"><h2>VICTORY!</h2></div>
+        <div id="defeat"><h2>DEFEAT!</h2></div>
+      </div>
+
+
+
+
+      <div class="buttonsBox"><div class="pure-button" id="startFightButton">FIGHT</div></div>
+
+    </div>
+    
+<script src="projectZ.js"></script>
+</body>
+</html

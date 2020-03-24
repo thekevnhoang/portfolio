@@ -2,6 +2,7 @@
 <html>
     <head>
         
+
 <title>Kdot's Portfolio</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
@@ -21,9 +22,52 @@
 	html{
 		scroll-behavior:smooth;
 		}
+dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 </style>
     </head>
-    <body>
+    <body>    
+
     
 <section id="section-showcase" class='jumbotron text-warning bg-dark'>
     <div class='container-fluid'>
@@ -59,25 +103,58 @@
     
     <div class='collapse navbar-collapse' id='menu'>
 		<ul class='nav navbar-nav ml-auto'>
+		
     	<li class='nav-item'>
-    		<a class='nav-link' href="#section-home"> Home </a>	
+    		<a class='nav-link' href="#section-showcase"> Home </a>	
     	</li>
     	<li class='nav-item'>
         	<a class='nav-link' href="#section-projects"> Projects </a>	
         </li>
-         <li class='nav-item'>
-        	<a class='nav-link' href="#section-blog"> Blog </a>	
-        </li>
+
         <li class='nav-item'>
         	<a class='nav-link' href="#section-about"> About </a>	
         </li>
         <li class='nav-item'>	
         	<a class='nav-link' href="#section-contact"> Contact </a>	
         </li>
+        
+		<li class='nav-item bd-primary'>
+        	<a class='nav-link text-primary' onclick="myFunction()"> Blog </a>	
+
+  <div id="myDropdown" class='dropdown-content dropdown-toggle dropdown-menu-right'>
+    <a href="#blog-1">The Inspiration Behind this Webpage</a>
+    <a href="#blog-2">Newest Javascript Updates!</a>
+  </div>
+</div>
        </ul>
     </div>
 </nav>
 
+<script>
+
+/* Clicking on dropdown menu toggles between 
+showing and hiding the blog posts */
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
 <section id="section-projects" class='bg-dark container-fluid text-white'>  
     <h1 class='text-warning'>Projects</h1>
 
@@ -85,12 +162,13 @@
     
 <div class='container'>
         <div id="projects" class='card-deck text-center'>
-            <a class='card bg-warning btn' href='#' target="_blank">
+            <a class='card bg-warning btn' href="projects/projectZ/index.html" target="_blank">
             <div class='card-header'></div>
             
 <img class='card-img-top' src='assets/ProjectZ.JPG' width='10' height='500'>
             <div class='card-body'>
-                	<h4 class='card-title text-dark'>Project Z</h4>
+                	<h4 class='card-title text-dark' >Project Z</h4>
+    
             </div>
             <div class='card-footer'>
                     <small class='text-dark'>by Kevin Hoang</small>
@@ -107,9 +185,9 @@
 <section id="section-blog" class='bg-dark pb-1 container-fluid text-warning'>
 	<div class='container-fluid'>
     <h1>Blog</h1>
-    
-<hr>
-   
+
+<section id="blog-1" class=class='bg-dark pb-1 container-fluid text-warning'>
+	<div class='container-fluid'>
     <article class='container'> 
         <h4>The Inspiration Behind this Webpage</h4>
         <p>
@@ -139,6 +217,35 @@
     </article>
 </section>
 
+<hr>
+
+<section id="blog-2" class=class='bg-dark pb-1 container-fluid text-warning'>
+	<div class='container-fluid'>
+    <article class='container'> 
+        <h4>Newest Javascript Updates</h4>
+        <p>
+    <div class='text-white'>
+        
+        	User interface is being improved! Features such as tab dropdown menus and external links to my projects will be provided.
+        	If you click on the blogs tab in the navigation bar, you can be immediately transferred to the chosen blog of your choice!
+        	I also implemented a sidebar navigation feature in the full version of this blog post that can navigate
+        	to and from the portfolio page as well.Also ProjectZ, a text based combat RPG is being pushed as well so stay tuned if you want to try the game out!
+        	<br>
+        	<br>
+    <img src='assets/ProjectZ.JPG' height="300" width="300"> </img>
+    <img src='assets/Screen Shot 2020-03-13 at 11.19.13 AM.png' height='240' width='450'></img>
+        </p>
+        
+<br>
+		<a class='btn btn-primary' href='blog/post2/index.html' role="button"> Full Blog Post </a>
+<br>
+        <small>Posted by Kevin Hoang on March 11, 2020</small>
+        
+        <hr class='white'>
+    </article>
+</section>
+
+</div>
 
 
 
@@ -216,6 +323,7 @@
         <p class='text-warning'>Copyright & Copy; 2020 Kevin Hoang</p>
     </div>
 </footer>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

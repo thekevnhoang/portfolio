@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+    	<title>Newest Javascript Features</title>
+    	<link href="styles/styling.css" rel="stylesheet">
+    </head>
+    
+    <body>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href='../../index.html' role="button"> Back to Portfolio </a>">Home</a>
+  <a href="#section-about">About</a>
+  <a href="#section-blog">Blog</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  <h1>Newest updates to Portfolio Page!</h1>
+  
+</div>
+<br> 
+<img src='assets/Screen Shot 2020-03-13 at 11.25.45 AM.png' height='300' width='500'> </img>
+
+<hr>
+
+<section id="section-blog" class='bg-info container-fluid bg-dark text-warning'>
+    <h1> Blog </h1>
+    
+    <p>Recent updates:</p>
+    <li>Dropdown menu implemented</li>
+	<li>Project Z Game added</li>
+	
+	<h4>
+		As of March 11, 2020, additions have been made to the portfolio page. The long awaited extension to Project Z has finally been
+		implemented as well as a dropdown menu linking to different sections of the page. If you click on the jumbotron card of Project Z
+		under the Projects section, you'll also be redirected to an external page containing the game. Thanks for being patient and checking
+		out my new updates!
+		<br>
+		<br>
+		
+	<img src="assets/ProjectZ.JPG" height="500" width="500"> </img>
+	</h4>
+	 <a href="#main" role="button">Back to Top of Page</a>
+	<hr>
+<section id="section-about" class='bg-info container-fluid bg-dark text-warning'>
+    <h1> About </h1>
+    <div class='row'>
+    	<div class="col-lg-2 col-sm-4">
+        <img src="assets/me.png" class='img-fluid' width='170' height='170'>
+    </div>
+    <div class="col-lg-10 col-sm-8 text-white">
+        <h4> Kevin Hoang </h4>
+                <p> Student. Dancer. Future Full-Stack Developer on the come-up | UNO'21
+        </p>
+         <a href="#main" role="button">Back to Top of Page</a>
+    </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+    
+    </body>
+</html>
