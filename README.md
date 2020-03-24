@@ -1,4 +1,6 @@
-thekevnhoang.com/portfolio
+https://thekevnhoang.github.io/portfolio/
+
+
 git init
 git add .
 git commit -m "comment here"
